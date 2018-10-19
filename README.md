@@ -65,18 +65,23 @@ When you run `vagrant up`, this folder will be available at http://localhost:808
 That's because the local copy of the php-example folder, in this repository, gets synchronized
 to /var/www/html/php-example in the VM that Vagrant will start.
 
-What this means is that students could create custom work in their own local folder (let's call
-it "work"), test their work at http://localhost:8080/work, and then commit and push their work
-to their own Git repositories.  Which leads us to grading.\*
+If you want to synchronize your own directory the virtual machine edit the `Vagrantfile` and 
+add the following line:
+```
+config.vm.synched_folder "<folder_name>", "/var/www/html/<folder_name>"
+```
 
-One small note: you can add a git submodule, or add a folder, but a folder may not contain
+This will allow the student to add their custom work to their own directory and verify the configuration works
+at `https://localhost:8080/folder_name`, and then commit and push their changes to their own Git repositories.
+
+Note: you can add a git submodule, or add a folder, but a folder may not contain
 local files *and* be the target of a git submodule.  In other words, if you expect students
 to create or change their own files in a subdirectory, then you'll need to leave that folder
 empty.
 
 ## Further ideas
 
-This demo is contrived.  It uses a basic Ubuntu box, published in the public Vagrant box
+This demo uses a basic Ubuntu box, published in the public Vagrant box
 catalog, along with some demo code and some tests.
 
 It's entirely possible to create your own Vagrant box using [Packer](https://www.packer.io/).
