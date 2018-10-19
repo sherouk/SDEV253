@@ -38,7 +38,7 @@ cd vagrant-demo
 vagrant up
 ```
 
-Once the machines has finished building you can connect using the following command:
+Once the machine has finished building you can connect using the following command:
 ```
 vagrant ssh
 ```
