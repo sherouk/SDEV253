@@ -1,0 +1,5 @@
+.vagrant
+bootstrap.retry
+*console.log
+*.swo
+*.swp
