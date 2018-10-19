@@ -1,7 +1,11 @@
 # Vagrant Demo
 
-This is a contrived example building a VM with a Vagrantfile, and publish it via git.
+This demo builds a basic Ubuntu LAMP stack virtual machine using the following software versions:
+ * Apache 2.4
+ * MySQL 5.7
+ * PHP 5.6
 
+## Purpose
 By using Vagrant, Virtualbox, and Git, each student gets:
 
 - A portfolio of their achievements while studying a software development class
@@ -27,8 +31,6 @@ Some software must be installed prior to building an environment:
 - [vagrant](https://vagrantup.com/)
 
 ## Quick Start
-
- 
 
 ```
 git clone https://ivytech.githost.com/kkeane1/vagrant-demo.git
@@ -67,7 +69,7 @@ local files *and* be the target of a git submodule.  In other words, if you expe
 to create or change their own files in a subdirectory, then you'll need to leave that folder
 empty.
 
-# Further ideas
+## Further ideas
 
 This demo is contrived.  It uses a basic Ubuntu box, published in the public Vagrant box
 catalog, along with some demo code and some tests.
