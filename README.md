@@ -38,6 +38,11 @@ cd vagrant-demo
 vagrant up
 ```
 
+Once the machines has finished building you can connect using the following command:
+```
+vagrant ssh
+```
+
 Note: The above vagrant up command will trigger Vagrant to download the `ubuntu/bionic` box via the specified URL Vagrant only does this if it detects that the box doesn't already exist on your system.
 
 ## Getting Started Guide
