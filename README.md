@@ -67,49 +67,13 @@ local files *and* be the target of a git submodule.  In other words, if you expe
 to create or change their own files in a subdirectory, then you'll need to leave that folder
 empty.
 
-## Grading
-
-Once a student has completed her work, an instructor simply has to clone her repository to 
-his own machine.  For example, let's say three students are taking a course.  The instructor 
-could create a grading directory, clone each student's repository into that directory, and
-then run `vagrant up`.  The machine should come up, starting a 
-
-```
-# Obtain students' work
-mkdir ~/grading
-cd ~/grading
-git clone https://github.com/gswallow/vagrant-demo.git gswallow
-git clone https://github.com/msmith/vagrant-demo.git msmith
-git clone https://github.com/bsimon/vagrant-demo.git bsimon
-
-# Grade gswallow's work
-cd gswallow
-vagrant up # test passes
-vagrant destroy -f
-
-# Grade msmith's work
-cd ../msmith
-vagrant up # test passes
-vagrant destroy -f
-
-# Grade bsimon's work
-cd ../bsimon
-vagrant up # test passes
-vagrant destroy -f
-```
-
-When you're done, there's no reason to keep that cruft around.  You can just remove the `grading`
-folder and re-clone a student's work if necessary.
-
 # Further ideas
 
 This demo is contrived.  It uses a basic Ubuntu box, published in the public Vagrant box
-catalog, along with some demo code and some tests.  The demonstrated
-code is beside the point.  What matters here is the process.
+catalog, along with some demo code and some tests.
 
 It's entirely possible to create your own Vagrant box using [Packer](https://www.packer.io/).
 Coupled with cheap cloud storage like Amazon S3, you can publish your own LAMP stack (or
 use someone else's if that suits you) and allow students to download it by making the 
 Vagrant box files publicly accessible and obtaining the download link.  Best of all, all of this
 is free (or, in the case of Amazon S3, extremely cheap).
-
