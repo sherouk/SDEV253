@@ -54,6 +54,24 @@ git config --global user.name "firstName lastName"
 git config --global user.email "username@ivytech.edu"
 ```
 
+Once you have registered on GitHub you will need to [fork](https://help.github.com/articles/fork-a-repo/) the repository.
+
+After you have forked the repository, you will need to [clone](https://help.github.com/articles/cloning-a-repository/) the repository.
+```
+git clone https://github.com/ivytech-infrastructure/vagrant-demo.git
+```
+
+Once the repository has been cloned locally to your machine you can build the machine
+```
+cd vagrant-demo
+vagrant up
+```
+
+Once the machine is finished building you can connect using the following command:
+```
+vagrant ssh
+```
+
 ## Troubleshooting
 ### Git
 If you have any issues with Git or learning how to use Git, head over to https://help.github.com/.
