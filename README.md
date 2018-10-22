@@ -15,8 +15,6 @@ By using Vagrant, Virtualbox, and Git, each student gets:
     - Students have complete access to their testing machine, meaning they can
       read server logs, experiment with the system software, or do whatever they want.
 
-Bugs in the demo?  Students can feel free to submit pull requests for peer review.
-
 ## Prequisites
 Some software **must** be installed prior to building an environment:
 
@@ -72,6 +70,9 @@ Once the machine is finished building you can connect using the following comman
 ```
 vagrant ssh
 ```
+
+## Contributing
+Bugs in the demo?  Students can feel free to submit pull requests for peer review.
 
 ## Troubleshooting
 ### Git
