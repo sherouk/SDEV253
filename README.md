@@ -29,6 +29,7 @@ Here is a list of suggested IDEs for developing:
   - [rstudio](https://www.rstudio.com)
   - [sublime text](https://sublimetext.com)
   - [vim](https://vim.org)
+  - [visual studio code](https://code.visualstudio.com/)
 
 ## Quick Start
 ```
