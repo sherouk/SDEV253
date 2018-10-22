@@ -84,6 +84,9 @@ Vagrant.configure("2") do |config|
     echo "Starting Apache2"
     systemctl enable apache2
     systemctl start apache2
+    echo "Enabling PHP5.6 FPM"
+    a2endmod proxy_fcgi setenvif
+    a2enconf php5.6-fpm
     echo "Starting MySQL"
     sleep 2
     systemctl enable mysql
