@@ -15,7 +15,7 @@ By using Vagrant, Virtualbox, and Git, each student gets:
     - Students have complete access to their testing machine, meaning they can
       read server logs, experiment with the system software, or do whatever they want.
 
-## Prequisites
+## Prerequisites
 Some software **must** be installed prior to building an environment:
 
   - [git](https://git-scm.com/downloads)
@@ -60,9 +60,13 @@ After you have forked the repository, you will need to [clone](https://help.gith
 git clone https://github.com/ivytech-infrastructure/vagrant-demo.git
 ```
 
+Configure your directory to synchronize to the machine by editing the `Vagrantfile` and adding the following:
+```
+config.vm.synched_folder "<folder_name>", "/var/www/html/<folder_name>"
+```
+
 Once the repository has been cloned locally to your machine you can build the machine
 ```
-cd vagrant-demo
 vagrant up
 ```
 
