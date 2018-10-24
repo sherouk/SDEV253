@@ -71,6 +71,7 @@ Vagrant.configure("2") do |config|
   #   apt-get install -y apache2
   # SHELL
   #
+  # need libapache2-mod-php5.6 for php to work with Apache
   config.vm.provision "shell", inline: <<-SHELL
     echo "Adding PHP5.6 repository"
     sleep 1
@@ -80,7 +81,7 @@ Vagrant.configure("2") do |config|
     apt update
     apt upgrade -y
     echo "Installing LAMP stack pacakges (Apache2, MySQL, PHP)"
-    apt install -y apache2 mysql-server php5.6 php5.6-fpm
+    apt install -y apache2 mysql-server php5.6 libapache2-mod-php5.6 php5.6-fpm
     echo "Starting Apache2"
     systemctl enable apache2
     systemctl start apache2
