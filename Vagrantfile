@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "php-example", "/var/www/html/php-example"
   config.vm.synced_folder "php-info", "/var/www/html/php-info"
-  config.vm.synced_folder "sdev253", "/var/www/html/sdev253"
+  config.vm.synced_folder "Class_Projects", "/var/www/html/class_projects"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -87,11 +87,12 @@ Vagrant.configure("2") do |config|
     systemctl enable apache2
     systemctl start apache2
     echo "Enabling PHP5.6 FPM"
-    a2endmod proxy_fcgi setenvif
+    a2enmod proxy_fcgi setenvif
     a2enconf php5.6-fpm
     echo "Starting MySQL"
     sleep 2
     systemctl enable mysql
     systemctl start mysql
+    mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' IDENTIFIED BY PASSWORD '*04E6E1273D1783DF7D57DC5479FE01CFFDFD0058' WITH GRANT OPTION"
   SHELL
 end
