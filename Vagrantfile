@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
   # config.vm.synced_folder "../data", "/vagrant_data"
   config.vm.synced_folder "php-example", "/var/www/html/php-example"
   config.vm.synced_folder "php-info", "/var/www/html/php-info"
-  config.vm.synced_folder "Class_Projects", "/var/www/html/class_projects"
+  config.vm.synced_folder "class_projects", "/var/www/html/class_projects"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
